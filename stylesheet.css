@@ -1,3 +1,69 @@
-h1 {
-color: red;
+@font-face {
+    font-family: Inter;
+    src: url(./font/static/Inter-Regular.ttf);
 }
+
+
+html, body {
+    font-family: Inter;
+    background-color: var(--background-color);
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --background-color: #dde1e2;
+    --dark-blue: #163257;
+    --blue: #5da3b8;
+    --light-blue: #84aeba;
+    --orange: #db3c1c;
+
+}
+
+.main-container{
+    border: 5px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+
+}
+
+.main-container > div {
+    border: 5px solid black;
+
+}
+
+.cat-image {
+    height: 50rem;
+}
+
+.sub-container2 {
+    flex: 1 1 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.sub-container3 {
+    flex: 1 1 10rem;
+}
+
+.sub-container2 > div {
+
+    border: 5px solid black;
+
+}
+
+.sub-container21 {
+    font-weight: 500;
+    font-size: 2rem;
+}
+
