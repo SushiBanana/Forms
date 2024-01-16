@@ -15,9 +15,9 @@ html, body {
 
 :root {
     --background-color: #dde1e2;
-    --dark-blue: #163257;
-    --blue: #5da3b8;
-    --light-blue: #84aeba;
+    --dark-shade: #163257;
+    --shade: #5da3b8;
+    --light-shade: #acd0db;
     --orange: #db3c1c;
 
 }
@@ -40,6 +40,11 @@ html, body {
 
 }
 
+.sub-container1 {
+    display: flex;
+    align-items: flex-end;
+}
+
 .cat-image {
     height: 50rem;
 }
@@ -48,12 +53,16 @@ html, body {
     flex: 1 1 30rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
 
 }
 
 .sub-container3 {
     flex: 1 1 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .sub-container2 > div {
@@ -66,4 +75,75 @@ html, body {
     font-weight: 500;
     font-size: 2rem;
 }
+
+.name-container, 
+.email-and-phone-container,
+.message-container,
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.winking-memoji {
+    height: 13rem;
+    border-radius: 50%;
+    background-color: var(--light-shade);
+}
+
+.my-name {
+    margin-bottom: 0.5rem;
+}
+
+.sub-container34 {
+    display: flex;
+}
+
+.fa-brands {
+    font-size: 2rem;
+    margin: 0.8rem;
+    padding: 0.75rem;
+    color: white;
+    background-color: #252930;
+    border-radius: 100%;
+}
+
+.fa-github:hover {
+    color: #252930;
+    background-color: var(--background-color);
+    transition: all 0.3s;
+}
+
+.fa-linkedin:hover {
+    color: #0077b5;
+    background-color: var(--background-color);
+    transition: all 0.3s;
+}
+
+.fa-instagram:hover {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #FD1D1D, #F56040, #F77737, #FCAF45);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-color: var(--background-color);
+    transition: all 0.3s;
+}
+
+.submit-btn {
+    background-color: var(--orange);
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 15rem;
+    border: 2px solid gray;
+    border-radius: 5px;
+    background-color: var(--background-color);
+}
+
+textarea {
+    width: 35rem;
+}
+
 

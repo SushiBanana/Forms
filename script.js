@@ -1,10 +1,22 @@
-const miniButton = document.querySelector("button")
+let darkMode = localStorage.getItem("darkMode");
+console.log(darkMode)
 
-function changeColor()
-{
-    miniButton.style.backgroundColor = "orange"
+
+
+
+
+const phoneInputField = document.querySelector("#phone");
+const phoneInput = window.intlTelInput(phoneInputField, {
+preferredCountries: ["my", "au", "sg", "cn"],
+utilsScript:
+    "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+});
+
+const info = document.querySelector(".alert-info");
+
+function process(event) {
+event.preventDefault();
+
+
 }
 
-miniButton.addEventListener("click", changeColor)
-
-console.log("yes")
