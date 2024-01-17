@@ -1,9 +1,10 @@
 const chkbox = document.querySelector("input[name=checkbox]")
 const subContainer1 = document.querySelector(".sub-container1")
-const catImageLight = document.querySelector(".cat-image-light")
-
-let newImg = document.createElement("img")
-
+const catImage = document.getElementById("cat-image")
+const memoji = document.getElementById("memoji")
+const github = document.querySelector(".fa-github")
+const inputs = document.querySelectorAll("input")
+const textarea = document.querySelector("textarea")
 
 chkbox.addEventListener("change", () => {
 
@@ -12,26 +13,36 @@ chkbox.addEventListener("change", () => {
     if (chkbox.checked) {
         
         document.body.classList.toggle("dark")
-        
-        if (catImageLight) {
-            subContainer1.removeChild(catImageLight)
-        }
 
-        newImg.src = "./images/cat-image-dark.jpg"
-        subContainer1.appendChild(newImg)
+        catImage.src = "./images/cat-image-dark.jpg"
+        subContainer1.appendChild(catImage)
 
-        // subContainer1.style.backgroundColor = "white"
+        memoji.src = "./images/me.png"
+
+        github.classList.add("dark")
+        inputs.forEach(input => {
+            input.classList.add("dark");
+          });
+        textarea.classList.add("dark")
+        subContainer1.classList.add("dark")
+
 
     // Dark mode is off
     } else {
         // Replaces cat image
         document.body.classList.toggle("dark")
-        subContainer1.removeChild(newImg)
 
-        newImg.src = "./images/Cat_image.jpg"
-        newImg.classList.add("cat-image-light")
-        subContainer1.appendChild(newImg)
+        catImage.src = "./images/Cat_image.jpg"
+        subContainer1.appendChild(catImage)
 
+        memoji.src = "./images/winking_memoji.png"
+
+        github.classList.remove("dark") 
+        inputs.forEach(input => {
+            input.classList.remove("dark");
+          });
+        textarea.classList.remove("dark")
+        subContainer1.classList.remove("dark")
     }
 
 })
